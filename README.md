@@ -7,4 +7,4 @@ easily be reproduce by tweaking the code a bit. For example replacing code lines
 
 `mut_sequence_2 = re.sub(hexamer2, mut_hexamer_2, mut_sequence, count=1)`\
 `prom_seq.append(mut_sequence_2)`\
-`label.append(0)`\
+`label.append(0)`
