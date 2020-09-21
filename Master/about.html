@@ -9,7 +9,7 @@
   <title>About</title>
   <style media="screen">
     .hero{
-      background: url('images/banner-2143727_1920.jpg') center / cover
+      background: url('images/bird-background.jpg') center / cover
     }
     .DNA{
       float: left;
@@ -44,6 +44,7 @@
 
       <div class="block">
 
+      <div class="columns">
         <div class="column">
           <p class="notification is-info" >The rapid boost in next generation sequencing
           technologies has increased the sizes of databases. In fact, with these new technologies,
@@ -54,10 +55,11 @@
           more insights as to how the genetic material of plants drive everything we see from germination
           to anthesis and to fruits.
         </div>
+      </div>
 
         <div class="columns">
-          <div class="column">
-            <p class="notification DNA_holder is-dark">
+          <div class="column is-8">
+            <p class=" DNA_holder has-text-black">
               <img src="images/dna-163710.jpg"
               alt="DNA" class="DNA" width="300" height="300">
               If we take a step back to look at the <abbr title="Deoxyribonucleic acid">DNA</abbr>,
@@ -68,29 +70,34 @@
               of the <abbr title="Clustered regularly interspaced short palindromic repeats">CRISPR</abbr>
               gene editing technologies, much efforts have been directed towards linking genetic diversity
               to the genetic code. In this project deep convolutional networks are used to discover the
-              patterns within the genetic code.
+              patterns within the genetic code. We attempt tp predict the relative expression of genes from
+              their promoter sequences.
             </p>
 
           </div>
 
-          <div class="column">
-            <p class="notification is-dark">Bluntly put, gene expression is the conversion of information from the
-              DNA to phenotypes. The information in the <abbr title="Deoxyribonucleic acid">DNA</abbr> is
-              sent to <abbr title="Ribonucleic acid">RNA</abbr> in a process called transcription. The
-              information is then forwarded to proteins in a process called translation. Again this pathway
-              is an over summarized form of genetic information transfer and a gene is considered expressed
-              as long as it undergoes transcription. This does not by no means imply that all genes that are
-              transcribed get to the stage of proteins or produce external phenotypic traits.
-              Some of the <abbr title="Ribonucleic acid">RNA</abbr> produced can act as molecules on their own,
-              others are precursors for further
-              downstream information transfer and others get degraded. After using the word phenotypes, one
-              may be wondering what phenotypes are then. Well genes and their variants make up the primary
-              phenotypes, everything between a gene and the external physical trait will make up the
-              intermediate phenotypes an the physical traits themselves are the terminal phenotypes.
 
-            </p>
-          </div>
         </div>
+
+      <div class="columns">
+        <div class="column is-8">
+          <p class="has-text-black">Bluntly put, gene expression is the conversion of information from the
+            DNA to phenotypes. The information in the <abbr title="Deoxyribonucleic acid">DNA</abbr> is
+            sent to <abbr title="Ribonucleic acid">RNA</abbr> in a process called transcription. The
+            information is then forwarded to proteins in a process called translation. Again this pathway
+            is an over summarized form of genetic information transfer and a gene is considered expressed
+            as long as it undergoes transcription. This does not by no means imply that all genes that are
+            transcribed get to the stage of proteins or produce external phenotypic traits.
+            Some of the <abbr title="Ribonucleic acid">RNA</abbr> produced can act as molecules on their own,
+            others are precursors for further
+            downstream information transfer and others get degraded. After using the word phenotypes, one
+            may be wondering what phenotypes are then. Well genes and their variants make up the primary
+            phenotypes, everything between a gene and the external physical trait will make up the
+            intermediate phenotypes an the physical traits themselves are the terminal phenotypes.
+
+          </p>
+        </div>
+      </div>
 
         <div class="colums">
           <p class="notification is-danger DNA_holder">
@@ -123,6 +130,64 @@
         </div>
 
       </div>
+
+      <div class="columns">
+        <div class="column">
+          <p class="notification is-danger">
+            <span class="tag is-info">Convolutional layers</span><br>
+            Convolutional layers are the main building blocks of the
+            convolutional neural network. They serve as feature extractors and can learn the features
+            representations of their inputs. Each neuron in a convolution layer is connected to
+            the neurons in it's receptive field on the previous layer. Their outputs are the feature
+            maps.
+          </p>
+        </div>
+
+        <div class="column">
+          <p class="notification is-danger">
+            <span class="tag is-info">Pooling layers</span><br>
+            Pooling layers reduce the spatial resoltion of the feature
+            maps produced by the convolutional layers. They help us mitigate the curse of dimensionality.
+            Pooling layers can be maxpooling or average pooling. As their names suggest, the take the max
+            value in their pooling field (just like a receptive field found in convolutional layers) or the
+            average.
+          </p>
+        </div>
+
+        <div class="column">
+          <p class="notification is-danger">
+            <span class="tag is-info">Dense layers</span><br>
+            Fully connected layers are simply layers in which each neuron
+            is connected to every every neuron in the previous layer. It is not strange to see some
+            machine learning experts stack fully connected layers at the end of their convolutional
+            neural networks. Keras and tensorflow have give these layers the cooler name, <b>Dense layers</b>.
+          </p>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column is-10">
+          <p class="has-text-black">
+            If convolutional neural networks are used for image classifications, how then do we make use of their
+            strengths in sequences classification? Sequences, like images also have features. The features found
+            within <abbr title="Deoxyribonucleic acid">DNA</abbr> sequences are called motifs. You may have heard
+            of the popular TATA-box motif but that is just one out of the numerous pool of motifs that have been
+            discovered within sequences. The <a href="https://agris-knowledgebase.org" target="_blank" class="has-text-link">AGRIS</a>
+            database provides
+            us with the sequences of motifs of varrying lengths found in <i>Arabidopsis</i>, from 6 nucleotides to 16 nucleotides long.
+            However, we can not feed sequences of letters into a network that does mathematical computation. So we need to represent these
+            sequences in numerical form and that is where the popular one hot encoding method steps in. One hot encoded sequences will be
+            large matrices with a lot of zeros and very few ones representing the neuclotides. The advantage of this method is that it
+            preserves the neighborhood within the data space. We began with artificial experiments in which we mutated real sequences and
+            decided their classes based on the mutations. Then we moved into the real world scenario in which we have no control over, where
+            nature alone decides the rules of engagement.
+
+          </p>
+        </div>
+
+      </div>
+
+
 
       <footer class="card-footer">
         <p class="card-footer-item has-text-white">&copy Network analysis and modelling (NAM)</p>
