@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.css">
   <title>About</title>
@@ -39,7 +40,7 @@
     <div class="container">
 
       <div class="block">
-        <a href="about.html" class="button is-dark is-medium is-outlined">About</a>
+        <a href="about.html" class="button is-dark is-medium animate__animated animate__flipInX animate__infinite">About</a>
       </div>
 
       <div class="block">
@@ -70,7 +71,7 @@
               of the <abbr title="Clustered regularly interspaced short palindromic repeats">CRISPR</abbr>
               gene editing technologies, much efforts have been directed towards linking genetic diversity
               to the genetic code. In this project deep convolutional networks are used to discover the
-              patterns within the genetic code. We attempt tp predict the relative expression of genes from
+              patterns within the genetic code. We attempt to predict the relative expression of genes from
               their promoter sequences.
             </p>
 
@@ -123,7 +124,7 @@
             </i> Our attention in this project was focused on one specific artificial neural network, the
             deep convolutional neural network. These networks are used primarily for image classification
             because they can identify features within images. Once a feature has been identified, it's position
-            in future images is irrelevant. Another beuaty of these architectures is that they are not fully
+            in future images is irrelevant. Another beauty of these architectures is that they are not fully
             connected. This means each neuron is only connected to a set of neurons within a small area  of the
             previous layer called it's receptive field.
           </p>
@@ -133,7 +134,7 @@
 
       <div class="columns">
         <div class="column">
-          <p class="notification is-danger">
+          <p class="notification is-danger animate__animated animate__pulse animate__infinite">
             <span class="tag is-info">Convolutional layers</span><br>
             Convolutional layers are the main building blocks of the
             convolutional neural network. They serve as feature extractors and can learn the features
@@ -144,7 +145,7 @@
         </div>
 
         <div class="column">
-          <p class="notification is-danger">
+          <p class="notification is-danger animate__animated animate__pulse animate__infinite">
             <span class="tag is-info">Pooling layers</span><br>
             Pooling layers reduce the spatial resoltion of the feature
             maps produced by the convolutional layers. They help us mitigate the curse of dimensionality.
@@ -155,7 +156,7 @@
         </div>
 
         <div class="column">
-          <p class="notification is-danger">
+          <p class="notification is-danger animate__animated animate__pulse animate__infinite">
             <span class="tag is-info">Dense layers</span><br>
             Fully connected layers are simply layers in which each neuron
             is connected to every every neuron in the previous layer. It is not strange to see some
@@ -187,16 +188,30 @@
 
       </div>
 
+      <div class="columns">
+
+          <div class="column">
+            <p class="notification is-warning animate__animated animate__pulse animate__infinite">
+              <span class="tag is-danger">Project Target</span><br>
+              The aim of this project was to predict the probability of a gene being expressed or remaining unexpressed using only
+              its promoter sequence. We do a full sweep using all the genes from <i>Arabidopsis thaliana</i>. The assignment of class
+              labels depended on the situation in the case of the artificial simulation and on the RNA seq normalized counts in the case
+              of the real world data.
+            </p>
+          </div>
+
+      </div>
+
 
 
       <footer class="card-footer">
-        <p class="card-footer-item has-text-white">&copy Network analysis and modelling (NAM)</p>
+        <p class="card-footer-item has-text-white animate__animated animate__pulse animate__infinite">&copy Network analysis and modelling (NAM)</p>
       </footer>
 
       <div class="block">
         <nav class="pagination">
-          <a href="index.html" class="pagination-previous has-text-white">previous</a>
-          <a href="result.html" class="pagination-next has-text-white">next</a>
+          <a href="index.html" class="pagination-previous has-text-white animate__animated animate__pulse animate__infinite">previous</a>
+          <a href="result.html" class="pagination-next has-text-white animate__animated animate__pulse animate__infinite">next</a>
           <ul class="pagination-list">
             <li><a href="about.html" class="pagination-link is-current has-text-white">2</a></li>
             <li><a href="result.html" class="pagination-link has-text-white">3</a></li>
