@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css">
+
   <title>About</title>
   <style media="screen">
     .hero{
@@ -27,6 +29,10 @@
     }
     .quotation{
       color: black;
+    }
+
+    .car-block{
+      margin:auto;
     }
   </style>
 </head>
@@ -60,7 +66,7 @@
 
         <div class="columns">
           <div class="column is-8">
-            <p class=" DNA_holder has-text-black">
+            <p class=" DNA_hold has-text-black">
               <img src="images/dna-163710.jpg"
               alt="DNA" class="DNA" width="300" height="300">
               If we take a step back to look at the <abbr title="Deoxyribonucleic acid">DNA</abbr>,
@@ -76,7 +82,6 @@
             </p>
 
           </div>
-
 
         </div>
 
@@ -101,7 +106,7 @@
       </div>
 
         <div class="colums">
-          <p class="notification is-danger DNA_holder">
+          <p class="notification is-danger DNA_hold">
             Artificial neural networks are an inspiration from the brain's architecture albeit some
             deviation from their biological cousins. They are at the core of deep learning, from
             powering google to things like youtube and even Apple's famous Siri. The most important
@@ -132,9 +137,9 @@
 
       </div>
 
-      <div class="columns">
-        <div class="column">
-          <p class="notification is-danger animate__animated animate__pulse animate__infinite">
+      <div class="columns carousel has-text-centered" id="carousel-demo">
+        <div class="column item-1 is-10 car-block">
+          <p class="notification is-danger">
             <span class="tag is-info">Convolutional layers</span><br>
             Convolutional layers are the main building blocks of the
             convolutional neural network. They serve as feature extractors and can learn the features
@@ -144,10 +149,10 @@
           </p>
         </div>
 
-        <div class="column">
-          <p class="notification is-danger animate__animated animate__pulse animate__infinite">
-            <span class="tag is-info">Pooling layers</span><br>
-            Pooling layers reduce the spatial resoltion of the feature
+        <div class="column item-2 is-10 car-block">
+          <p class="notification is-dark">
+            <span class="tag is-danger">Pooling layers</span><br>
+            Pooling layers reduce the spatial resolution of the feature
             maps produced by the convolutional layers. They help us mitigate the curse of dimensionality.
             Pooling layers can be maxpooling or average pooling. As their names suggest, the take the max
             value in their pooling field (just like a receptive field found in convolutional layers) or the
@@ -155,13 +160,32 @@
           </p>
         </div>
 
-        <div class="column">
-          <p class="notification is-danger animate__animated animate__pulse animate__infinite">
-            <span class="tag is-info">Dense layers</span><br>
+        <div class="column item-3 is-10 car-block">
+          <p class="notification is-info">
+            <span class="tag is-danger">Dense layers</span><br>
             Fully connected layers are simply layers in which each neuron
             is connected to every every neuron in the previous layer. It is not strange to see some
             machine learning experts stack fully connected layers at the end of their convolutional
             neural networks. Keras and tensorflow have give these layers the cooler name, <b>Dense layers</b>.
+          </p>
+        </div>
+
+        <div class="column item-4 is-10 car-block">
+          <p class="notification is-success">
+            <span class="tag is-dark">Dropout layers</span><br>
+            One of the problems faced by deep learning networks is the so called overfitting. A situation in
+            which the network performs well on the training set but poorly on the validation set. To mitigate
+            this problem, scientist created the dropout layers. Like the name, these layers switch off some neurons
+            during training.
+          </p>
+        </div>
+
+        <div class="column item-5 is-10 car-block">
+          <p class="notification is-link">
+            <span class="tag is-danger">Batch normalization</span><br>
+            Another problem that may arise as a result of the activation function used is the problem of a
+            vanishing gradient. When the gradient vanishes, it affects how backpropagation updates the weights.
+            To mitigate this, Sergey Ioffe and Christian Szegedy proposed batch normalization.
           </p>
         </div>
       </div>
@@ -202,7 +226,48 @@
 
       </div>
 
+      <div class="columns">
 
+        <div class="column">
+          <p class="has-text-black">The 1001 genomes project for <i>Arabidopsis thaliana</i> was launched in 2008, with the goal to discover
+            detailed whole-genome variation in  atleast 1001 strains. It finally ended up providing detailed analysis
+            of 1135 genomes. The second generation sequencing technologies used produce short reads from their
+            which were aligned to a reference genome to identify variants. To train neural networks, one requires a
+            massive amount of data. So we reconstructed 728 from the 1135 genomes using the Genome analysis toolkit. This
+            tool helps us reconstruct a pseudogenome from a reference genome and a variant call format file.
+
+            Combining some python scripting and bedtools, we were able to extract promoter sequences for every gene in
+            <i>Arabidopsis</i>. The RNA seq normalized counts were provided by the scientist who analysed the chosen 728
+            genomes. Remember we mentioned above that class asignment for the real simulation was done using the normalized
+            counts; genes with 0 normalized counts were considered relatively unexpressed otherwise relatively expressed. Again we use
+            "relatively expressed" because we can not calculate the absolute expression of a gene, since things like RNA degradation
+            can occur before we perform RNA seq analysis.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="columns">
+        <div class="column animate__animated animate__pulse animate__infinite">
+          <p class="notification is-warning DNA_hold">
+            <span class="tag is-danger">Hint</span><br>
+            Not all publications or projects will provide you with analyzed read counts. So how do
+            you get this yourself ? Don't bother because the bioinformatics community has got you more
+            than covered. The easiest way to perform RNA seq analysis with no interaction with the
+            command line is to use the Galaxy server. <img src="images/galaxy.png" alt="Galaxy logo" class="ANN">
+            Galaxy provides you with a user interface to create workflows by linking processing tools
+            together. A typical workflow can begin with an accession list; Galaxy will automatically download
+            the fastq files from the <abbr title="Sequence read archive">SRA</abbr> database; files will be
+            trimmed with trimmomatic; files are checked for quality using the FastQC tool; files are aligned to
+            a reference genome using hisat which produces normailzed counts in transcripts per million. If you have
+            fewer fastq files, found on your localhost and you are confident with interacting with the command line,
+            then there is another way to do your analysis; files can be trimmed with trimmomatic, quality controlled
+            with FastQC and finally aligned with kallisto.
+
+
+          </p>
+        </div>
+      </div>
 
       <footer class="card-footer">
         <p class="card-footer-item has-text-white animate__animated animate__pulse animate__infinite">&copy Network analysis and modelling (NAM)</p>
@@ -218,12 +283,22 @@
             <li><a href="perspective.html" class="pagination-link has-text-white">4</a></li>
           </ul>
         </nav>
-      </div>
-
+     </div>
 
     </div>
 
+    </div>
   </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
+  <script>
+  bulmaCarousel.attach('#carousel-demo', {
+    slidesToScroll: 1,
+    slidesToShow: 1,
+    autoplay: true,
+    infinite: true,
+  });
+  </script>
 
 </body>
 </html>
