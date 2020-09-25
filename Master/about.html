@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css">
 
-  <title>About</title>
   <style media="screen">
     .hero{
       background: url('images/bird-background.jpg') center / cover
@@ -35,36 +35,35 @@
       margin:auto;
     }
   </style>
+  <title>About</title>
 </head>
 <body>
-  <section class="hero is-fullheight">
-
-    <div class="block">
-
-    </div>
-
-    <div class="container">
-
+  <section class="hero">
+    <div class="hero-body">
       <div class="block">
-        <a href="about.html" class="button is-dark is-medium animate__animated animate__flipInX animate__infinite">About</a>
+
       </div>
 
-      <div class="block">
+      <div class="container">
 
-      <div class="columns">
-        <div class="column">
-          <p class="notification is-info" >The rapid boost in next generation sequencing
-          technologies has increased the sizes of databases. In fact, with these new technologies,
-          scientist are opened to new possibilities and definitely new challenges. What used to be
-          a problem of lack of data, has now become a problem of how to store these data and
-          how to extract the information burried deep within. Thanks to organisms like <i>Arabidopsis
-          thaliana</i> and a group of others known as model organisms, plant biologist have had
-          more insights as to how the genetic material of plants drive everything we see from germination
-          to anthesis and to fruits.
+        <div class="block">
+          <a href="about.html" class="button is-dark is-medium animate__animated animate__flipInX animate__infinite">About</a>
         </div>
-      </div>
 
-        <div class="columns">
+
+          <div class="column">
+            <p class="notification is-info" >The rapid boost in next generation sequencing
+            technologies has increased the sizes of databases. In fact, with these new technologies,
+            scientist are opened to new possibilities and definitely new challenges. What used to be
+            a problem of lack of data, has now become a problem of how to store these data and
+            how to extract the information burried deep within. Thanks to organisms like <i>Arabidopsis
+            thaliana</i> and a group of others known as model organisms, plant biologist have had
+            more insights as to how the genetic material of plants drive everything we see from germination
+            to anthesis and to fruits.
+          </div>
+
+
+
           <div class="column is-8">
             <p class=" DNA_hold has-text-black">
               <img src="images/dna-163710.jpg"
@@ -80,12 +79,10 @@
               patterns within the genetic code. We attempt to predict the relative expression of genes from
               their promoter sequences.
             </p>
-
           </div>
 
-        </div>
 
-      <div class="columns">
+
         <div class="column is-8">
           <p class="has-text-black">Bluntly put, gene expression is the conversion of information from the
             DNA to phenotypes. The information in the <abbr title="Deoxyribonucleic acid">DNA</abbr> is
@@ -100,42 +97,41 @@
             may be wondering what phenotypes are then. Well genes and their variants make up the primary
             phenotypes, everything between a gene and the external physical trait will make up the
             intermediate phenotypes an the physical traits themselves are the terminal phenotypes.
-
-          </p>
-        </div>
-      </div>
-
-        <div class="colums">
-          <p class="notification is-danger DNA_hold">
-            Artificial neural networks are an inspiration from the brain's architecture albeit some
-            deviation from their biological cousins. They are at the core of deep learning, from
-            powering google to things like youtube and even Apple's famous Siri. The most important
-            similarity between artificial neural nertworks and the brain is the hierarchy in which
-            information is transfered.<img src="images/neurons-1739997_1920.jpg" alt="neurons"
-            width="300" height="300" class="ANN"> If we look at the brain on the left constructed
-            by only its neurons, we quickly realise interconnection between several neurons. The
-            hierarchy within such a net may not be seen from this image but there exist such a
-            hierarchical structuring in our brains.
-            The Hubel and Wiesel model presents the visual cortex structure as follows:
-            LGB (lateral geniculate body)→simple cells→complex
-            cells→lower order hypercomplex cells→higher order hypercomplex cells. It is in fact from
-            this model that Fukushima gained his inspiration of the neocognitron which is the
-            pioneer inspiration of modern day convolutional neural networks.
-            <i class="quotation">
-              The one thing humans however
-              have which artificial neural networks lack is perception. When you look at the picture of
-              a cute puppy you can not choose not to see the puppy or its cuteness. Neither can you explain
-              how you recognized a cute puppy; it's just obvious.
-            </i> Our attention in this project was focused on one specific artificial neural network, the
-            deep convolutional neural network. These networks are used primarily for image classification
-            because they can identify features within images. Once a feature has been identified, it's position
-            in future images is irrelevant. Another beauty of these architectures is that they are not fully
-            connected. This means each neuron is only connected to a set of neurons within a small area  of the
-            previous layer called it's receptive field.
           </p>
         </div>
 
+
+      <div class="column">
+        <p class="notification is-danger DNA_hold">
+          Artificial neural networks are an inspiration from the brain's architecture albeit some
+          deviation from their biological cousins. They are at the core of deep learning, from
+          powering google to things like youtube and even Apple's famous Siri. The most important
+          similarity between artificial neural nertworks and the brain is the hierarchy in which
+          information is transfered.<img src="images/neurons-1739997_1920.jpg" alt="neurons"
+          width="300" height="300" class="ANN"> If we look at the brain on the left constructed
+          by only its neurons, we quickly realise interconnection between several neurons. The
+          hierarchy within such a net may not be seen from this image but there exist such a
+          hierarchical structuring in our brains.
+          The Hubel and Wiesel model presents the visual cortex structure as follows:
+          LGB (lateral geniculate body)→simple cells→complex
+          cells→lower order hypercomplex cells→higher order hypercomplex cells. It is in fact from
+          this model that Fukushima gained his inspiration of the neocognitron which is the
+          pioneer inspiration of modern day convolutional neural networks.
+          <i class="quotation">
+            The one thing humans however
+            have which artificial neural networks lack is perception. When you look at the picture of
+            a cute puppy you can not choose not to see the puppy or its cuteness. Neither can you explain
+            how you recognized a cute puppy; it's just obvious.
+          </i> Our attention in this project was focused on one specific artificial neural network, the
+          deep convolutional neural network. These networks are used primarily for image classification
+          because they can identify features within images. Once a feature has been identified, it's position
+          in future images is irrelevant. Another beauty of these architectures is that they are not fully
+          connected. This means each neuron is only connected to a set of neurons within a small area  of the
+          previous layer called it's receptive field.
+        </p>
       </div>
+      <section>
+
 
       <div class="columns carousel has-text-centered" id="carousel-demo">
         <div class="column item-1 is-10 car-block">
@@ -190,7 +186,6 @@
         </div>
       </div>
 
-      <div class="columns">
         <div class="column is-10">
           <p class="has-text-black">
             If convolutional neural networks are used for image classifications, how then do we make use of their
@@ -206,13 +201,10 @@
             preserves the neighborhood within the data space. We began with artificial experiments in which we mutated real sequences and
             decided their classes based on the mutations. Then we moved into the real world scenario in which we have no control over, where
             nature alone decides the rules of engagement.
-
           </p>
         </div>
 
-      </div>
 
-      <div class="columns">
 
           <div class="column">
             <p class="notification is-warning animate__animated animate__pulse animate__infinite">
@@ -224,9 +216,7 @@
             </p>
           </div>
 
-      </div>
 
-      <div class="columns">
 
         <div class="column">
           <p class="has-text-black">The 1001 genomes project for <i>Arabidopsis thaliana</i> was launched in 2008, with the goal to discover
@@ -245,9 +235,8 @@
           </p>
         </div>
 
-      </div>
 
-      <div class="columns">
+
         <div class="column animate__animated animate__pulse animate__infinite">
           <p class="notification is-warning DNA_hold">
             <span class="tag is-danger">Hint</span><br>
@@ -263,11 +252,11 @@
             fewer fastq files, found on your localhost and you are confident with interacting with the command line,
             then there is another way to do your analysis; files can be trimmed with trimmomatic, quality controlled
             with FastQC and finally aligned with kallisto.
-
-
           </p>
         </div>
-      </div>
+
+        <div class="block"></div>
+
 
       <footer class="card-footer">
         <p class="card-footer-item has-text-white animate__animated animate__pulse animate__infinite">&copy Network analysis and modelling (NAM)</p>
@@ -286,10 +275,9 @@
      </div>
 
     </div>
-
     </div>
-  </section>
 
+  </section>
   <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
   <script>
   bulmaCarousel.attach('#carousel-demo', {
@@ -301,4 +289,5 @@
   </script>
 
 </body>
+
 </html>

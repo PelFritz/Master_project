@@ -35,90 +35,87 @@
 </head>
 <body>
   <section class="hero is-fullheight">
-
-    <div class="block">
-
-    </div>
-
-    <div class="container">
-
+    <div class="hero-body">
       <div class="block">
-          <a href="result.html" class="button is-dark is-medium animate__animated animate__flipInX animate__infinite">Results</a>
-      </div>
-
-      <div class="columns">
-        <div class="column is-8">
-          <p class="notification pic-holder is-dark">
-            <img src="images/2_mut_TATA.png" alt="scenario_2" width="300" class="in-pic">
-            Remember we spoke about the TATA-box motif. Well you are in luck because we played
-            with it during our artificial simulation. The score plot on the right shows scenario 1
-            of our experiment. In this scenario we mutated the TATAAA (TATA-box) sequence into a
-            TGTCAA. This means we introduced two mutations on a single TATA box for every sequence
-            and gave it the label unexpressed. From the plot these mutations are indicated by <thead>
-            orange (<b id="mut_1">C</b>) and green(<b id="mut_2">G</b>) signals moving in the negative direction.
-            </thead>
-            <span class="tag is-info">Reason</span>: Here we play nature and decide the rules of
-            expression and unexpression. Such that sequences with a single mutated TATA-box will be
-            unexpressed. This is however, not always true in nature.
-          </p>
-        </div>
 
       </div>
 
-      <div class="columns is-gapless">
-        <div class="column">
-          <p class="notification is-dark pic-holder">
-            <img src="images/OR_CATAAT.png" alt="or_CAT" width="300" class="in-pic">
-            In scenario 4, we set the rules for an OR system. We mutated two motifs this time:
-            the TATAAA and a CATAAT motif. The TATAAA was mutated into a T<b id="mut_2">G</b>TAAA and the CATAAT was
-            mutated into CA<b id="mut_1">C</b>AAT. Sequences can be expressed if they contain any of the mutations or
-            both of the mutations. In the first image, a gene had the mutation on the CATAAT
-            element. So we see the negative orange signal.<br>
+      <div class="container">
 
-            <img src="images/OR_TATAAA.png" alt="or_CAT" width="300" class="in-pic">
-            In the second image the gene tested had the mutation on the TATAAA element hence the green signal shown.
-
-            <br>
-
-            <img src="images/OR_TAT_CAT.png" alt="or_CAT" width="300" class="in-pic">
-            Finally a gene with the mutations on both elements, will have a mixture of green and orange signals
-            which are distant from each other. At this point you may be wondering why we have two orange signals
-            and just one green signal. All these signals are produced from the same gene, however these are different
-            variants of the same gene because they come from different genomes. This means there is possibility of
-            indels changing elements or shifting them within a sequence.
-          </p>
+        <div class="block">
+            <a href="result.html" class="button is-dark is-medium animate__animated animate__flipInX animate__infinite">Results</a>
         </div>
 
-        </div>
 
-        <div class="columns">
-          <div class="column">
-            <p class="notification is-warning animate__animated animate__pulse animate__infinite">
-              <span class="tag is-danger">Hint</span>
-              The beautiful images and interpretation of our deep convolutional network we have is all thanks
-              to the friendly folks who created the feature importance extraction tool
-               called <a href="https://arxiv.org/abs/1704.02685" target="_blank" class="has-text-info">Deeplift</a>.
-              Deeplift computes importance scores by comparing each original sequence to a refernce input sequence, in
-              our case a shuffled form of the original sequence.
+          <div class="column is-8">
+            <p class="notification pic-holder is-dark">
+              <img src="images/2_mut_TATA.png" alt="scenario_2" width="300" class="in-pic">
+              Remember we spoke about the TATA-box motif. Well you are in luck because we played
+              with it during our artificial simulation. The score plot on the right shows scenario 1
+              of our experiment. In this scenario we mutated the TATAAA (TATA-box) sequence into a
+              TGTCAA. This means we introduced two mutations on a single TATA box for every sequence
+              and gave it the label unexpressed. From the plot these mutations are indicated by <thead>
+              orange (<b id="mut_1">C</b>) and green(<b id="mut_2">G</b>) signals moving in the negative direction.
+              </thead>
+              <span class="tag is-info">Reason</span>: Here we play nature and decide the rules of
+              expression and unexpression. Such that sequences with a single mutated TATA-box will be
+              unexpressed. This is however, not always true in nature.
             </p>
           </div>
 
-      </div>
+
+          <div class="column">
+            <p class="notification is-dark pic-holder">
+              <img src="images/OR_CATAAT.png" alt="or_CAT" width="300" class="in-pic">
+              In scenario 4, we set the rules for an OR system. We mutated two motifs this time:
+              the TATAAA and a CATAAT motif. The TATAAA was mutated into a T<b id="mut_2">G</b>TAAA and the CATAAT was
+              mutated into CA<b id="mut_1">C</b>AAT. Sequences can be expressed if they contain any of the mutations or
+              both of the mutations. In the first image, a gene had the mutation on the CATAAT
+              element. So we see the negative orange signal.<br>
+
+              <img src="images/OR_TATAAA.png" alt="or_CAT" width="300" class="in-pic">
+              In the second image the gene tested had the mutation on the TATAAA element hence the green signal shown.
+
+              <br>
+
+              <img src="images/OR_TAT_CAT.png" alt="or_CAT" width="300" class="in-pic">
+              Finally a gene with the mutations on both elements, will have a mixture of green and orange signals
+              which are distant from each other. At this point you may be wondering why we have two orange signals
+              and just one green signal. All these signals are produced from the same gene, however these are different
+              variants of the same gene because they come from different genomes. This means there is possibility of
+              indels changing elements or shifting them within a sequence.
+            </p>
+          </div>
 
 
-      <footer class="card-footer">
-        <p class="card-footer-item has-text-white animate__animated animate__pulse animate__infinite">&copy Network analysis and modelling (NAM)</p>
-      </footer>
+            <div class="column">
+              <p class="notification is-warning animate__animated animate__pulse animate__infinite">
+                <span class="tag is-danger">Hint</span>
+                The beautiful images and interpretation of our deep convolutional network we have is all thanks
+                to the friendly folks who created the feature importance extraction tool
+                 called <a href="https://arxiv.org/abs/1704.02685" target="_blank" class="has-text-info">Deeplift</a>.
+                Deeplift computes importance scores by comparing each original sequence to a refernce input sequence, in
+                our case a shuffled form of the original sequence.
+              </p>
+            </div>
 
-      <div class="block">
-        <nav class="pagination">
-          <a href="about.html" class="pagination-previous has-text-white animate__animated animate__pulse animate__infinite">previous</a>
-          <a href="perspective.html" class="pagination-next has-text-white animate__animated animate__pulse animate__infinite">next</a>
-          <ul class="pagination-list">
-            <li><a href="result.html" class="pagination-link has-text-white is-current">3</a></li>
-            <li><a href="perspective.html" class="pagination-link has-text-white">4</a></li>
-          </ul>
-        </nav>
+
+
+        <footer class="card-footer">
+          <p class="card-footer-item has-text-white animate__animated animate__pulse animate__infinite">&copy Network analysis and modelling (NAM)</p>
+        </footer>
+
+        <div class="block">
+          <nav class="pagination">
+            <a href="about.html" class="pagination-previous has-text-white animate__animated animate__pulse animate__infinite">previous</a>
+            <a href="perspective.html" class="pagination-next has-text-white animate__animated animate__pulse animate__infinite">next</a>
+            <ul class="pagination-list">
+              <li><a href="result.html" class="pagination-link has-text-white is-current">3</a></li>
+              <li><a href="perspective.html" class="pagination-link has-text-white">4</a></li>
+            </ul>
+          </nav>
+        </div>
+
       </div>
 
     </div>
