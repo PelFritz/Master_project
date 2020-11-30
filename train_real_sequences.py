@@ -1,4 +1,4 @@
-from tensorflow.keras.layers import Layer, Conv2D, BatchNormalization, Dense, MaxPool2D, Activation, Flatten, Dropout
+from tensorflow.keras.layers import  Conv2D, Dense, Activation, Flatten, Dropout
 from tensorflow.keras import Sequential, backend
 from tensorflow.keras.callbacks import EarlyStopping
 import tensorflow as tf
@@ -87,14 +87,14 @@ for genome in os.listdir('/nam-99/ablage/nam/peleke/snp_promoters'):
             seq = str(rec.seq)
             if ID in train_genes and ID in gene_ids_in_counts:
                 train_prom_seq.append(seq)
-                if norm_counts[genome_key][ID] == 0:
+                if norm_counts[genome_key][ID] == 0: # change to 10, 20 for thresholding
                     train_label.append(0)
                 else:
                     train_label.append(1)
 
             elif ID in test_genes and ID in gene_ids_in_counts:
                 test_prom_seq.append(seq)
-                if norm_counts[genome_key][ID] == 0:
+                if norm_counts[genome_key][ID] == 0: # change to 10, 20 for thresholding
                     test_label.append(0)
                 else:
                     test_label.append(1)

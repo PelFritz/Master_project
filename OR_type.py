@@ -52,16 +52,25 @@ for genome in os.listdir('/nam-99/ablage/nam/peleke/promoters'):
             sequence = str(promoter.seq)
             if prom_id in gene_id:
                 if re.search(hexamer, sequence) and re.search(hexamer2, sequence):
+                    # mutate TATA-box
                     prom_seq.append(sequence)
                     label.append(1)
                     mut_sequence = re.sub(hexamer, mut_hexamer, sequence, count=1)
                     prom_seq.append(mut_sequence)
                     label.append(0)
 
+                    # mutate  CATAAT-box
                     prom_seq.append(sequence)
                     label.append(1)
                     mut_sequence_2 = re.sub(hexamer2, mut_hexamer_2, sequence, count=1)
                     prom_seq.append(mut_sequence_2)
+                    label.append(0)
+
+                    # mutate both motifs
+                    prom_seq.append(sequence)
+                    label.append(1)
+                    mut_sequence3 = re.sub(hexamer2, mut_hexamer_2, mut_sequence, count=1)
+                    prom_seq.append(mut_sequence3)
                     label.append(0)
 
 
