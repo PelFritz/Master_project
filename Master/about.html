@@ -207,12 +207,13 @@
 
 
           <div class="column">
-            <p class="notification is-warning animate__animated animate__pulse animate__infinite">
+            <p class="notification is-warning">
               <span class="tag is-danger">Project Target</span><br>
-              The aim of this project was to predict the probability of a gene being expressed or remaining unexpressed using only
+              The aim of this project was to predict the likelihood of a gene being expressed or unexpressed using only
+
               its promoter sequence. We do a full sweep using all the genes from <i>Arabidopsis thaliana</i>. The assignment of class
-              labels depended on the situation in the case of the artificial simulation and on the RNA seq normalized counts in the case
-              of the real world data.
+              labels depended on the situation in the case of the artificial scenarios and on the RNA seq normalized counts in the case
+              of the real sequences.
             </p>
           </div>
 
@@ -228,7 +229,7 @@
 
             Combining some python scripting and bedtools, we were able to extract promoter sequences for every gene in
             <i>Arabidopsis</i>. The RNA seq normalized counts were provided by the scientist who analysed the chosen 728
-            genomes. Remember we mentioned above that class asignment for the real simulation was done using the normalized
+            genomes. Remember we mentioned above that class asignment for the real sequences was done using the normalized
             counts; genes with 0 normalized counts were considered relatively unexpressed otherwise relatively expressed. Again we use
             "relatively expressed" because we can not calculate the absolute expression of a gene, since things like RNA degradation
             can occur before we perform RNA seq analysis.
@@ -237,7 +238,7 @@
 
 
 
-        <div class="column animate__animated animate__pulse animate__infinite">
+        <div class="column">
           <p class="notification is-warning DNA_hold">
             <span class="tag is-danger">Hint</span><br>
             Not all publications or projects will provide you with analyzed read counts. So how do

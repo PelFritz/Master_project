@@ -46,28 +46,10 @@
             <a href="result.html" class="button is-dark is-medium animate__animated animate__flipInX animate__infinite">Results</a>
         </div>
 
-
-          <div class="column is-8">
-            <p class="notification pic-holder is-dark">
-              <img src="images/2_mut_TATA.png" alt="scenario_2" width="300" class="in-pic">
-              Remember we spoke about the TATA-box motif. Well you are in luck because we played
-              with it during our artificial simulation. The score plot on the right shows scenario 1
-              of our experiment. In this scenario we mutated the TATAAA (TATA-box) sequence into a
-              TGTCAA. This means we introduced two mutations on a single TATA box for every sequence
-              and gave it the label unexpressed. From the plot these mutations are indicated by <thead>
-              orange (<b id="mut_1">C</b>) and green(<b id="mut_2">G</b>) signals moving in the negative direction.
-              </thead>
-              <span class="tag is-info">Reason</span>: Here we play nature and decide the rules of
-              expression and unexpression. Such that sequences with a single mutated TATA-box will be
-              unexpressed. This is however, not always true in nature.
-            </p>
-          </div>
-
-
           <div class="column">
             <p class="notification is-dark pic-holder">
               <img src="images/OR_CATAAT.png" alt="or_CAT" width="300" class="in-pic">
-              In scenario 4, we set the rules for an OR system. We mutated two motifs this time:
+              In the OR-type, we set the rules for an OR system. We mutated two motifs this time:
               the TATAAA and a CATAAT motif. The TATAAA was mutated into a T<b id="mut_2">G</b>TAAA and the CATAAT was
               mutated into CA<b id="mut_1">C</b>AAT. Sequences can be expressed if they contain any of the mutations or
               both of the mutations. In the first image, a gene had the mutation on the CATAAT
@@ -87,9 +69,28 @@
             </p>
           </div>
 
+          <div class="column">
+            <p class="notification is-dark pic-holder">
+              <span class="tag is-link">Motif discovery</span>: We are also able to capture
+              some important motifs using our CNNs. We could actually capture the GATA-disc promoter
+              motif within the CBL interacting protein kinase 9, a gene involved in biosynthesis in
+              <i>A. thaliana</i>
+              <img src="images/AT1G01140.png" alt="AT1G01140" class="in-pic">
+              CNNs are very powerful because of their repetitive use of filters. Since these filters can be
+              predefined as the length of short motifs, we simply create filters which are 6 bp long and use
+              these to scan an entire sequence. As the filters go through each sequence, specific
+              mathematical calculations called convolutions will be performed. This produces feature maps at the
+              end of each convolutional layer. One can think of a convolution as inputs multiplied by the weights
+              plus biases. The weights are represented by our short windows which are 6 bp long.
+              Once we train our network and do predictions we can feed these predictions to DeepLIFT which will
+              help us visualize the regions which were crucial to prediction. The GATA-disc for example is
+              represented by the pattern "TGATAA". This is captured within our predictions.
+            </p>
+          </div>
+
 
             <div class="column">
-              <p class="notification is-warning animate__animated animate__pulse animate__infinite">
+              <p class="notification is-warning">
                 <span class="tag is-danger">Hint</span>
                 The beautiful images and interpretation of our deep convolutional network we have is all thanks
                 to the friendly folks who created the feature importance extraction tool
