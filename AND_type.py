@@ -35,6 +35,10 @@ print('There are ', len(gene_id), ' genes per genome being verified for patterns
 # Search for TATA-Box promoters
 hexamer = 'TATAAA'
 mut_hexamer = 'TGTAAA'
+
+hexamer2 = 'CATAAT'
+mut_hexamer_2 = 'CACAAT'
+
 label = []
 prom_seq = []
 print('step 2: Mutating TATA-boxes')
@@ -46,11 +50,20 @@ for genome in os.listdir('/nam-99/ablage/nam/peleke/promoters'):
             prom_id = promoter.id.split(':')[1]
             sequence = str(promoter.seq)
             if prom_id in gene_id:
-                if re.search(hexamer, sequence):
+                if re.search(hexamer, sequence) and re.search(hexamer2, sequence):
+                    # mutate TATA-box on a sequence and both motifs on another sequence
+                    mut_sequence = re.sub(hexamer, mut_hexamer, sequence, count=1)
+                    prom_seq.append(mut_sequence)
+                    label.append(1)
+                    mut_sequence2 = re.sub(hexamer2, mut_hexamer_2, mut_sequence, count=1)
+                    prom_seq.append(mut_sequence2)
+                    label.append(0)
+
+                    # Mutate both motifs on a sequence and leave the original sequence unmutated
                     prom_seq.append(sequence)
                     label.append(1)
-                    mut_sequence = re.sub(hexamer, mut_hexamer, sequence)
-                    prom_seq.append(mut_sequence)
+                    mut_sequence2 = re.sub(hexamer2, mut_hexamer_2, mut_sequence, count=1)
+                    prom_seq.append(mut_sequence2)
                     label.append(0)
 
 
